@@ -1,8 +1,10 @@
 import * as dotenv from 'dotenv';
+
+dotenv.config();
+
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
 
-dotenv.config();
 @Injectable()
 export class PrismaService extends PrismaClient implements OnModuleInit {
   async onModuleInit() {
